@@ -1,0 +1,29 @@
+	h3 > i {
+		font-weight: 200;
+		color: orange;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+	li {
+		padding: 5px;
+		display: flex;
+		align-items: center;
+		line-height: 2em;
+	}
+	li:hover {
+		background-color: aliceblue;
+		cursor: pointer;
+	}
+	input {
+		margin: 0.51em;
+	}
+	label {
+		cursor: pointer;
+	}
+
+	.strike {
+		text-decoration: line-through;
+		color: lightgray;
+	}

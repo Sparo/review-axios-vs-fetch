@@ -1,0 +1,13 @@
+import './assets/css/global.css';
+
+import Vue from 'vue'
+import App from './components/App.vue'
+import Api from './plugins/api';
+
+Vue.use(Api, { baseURL: 'https://jsonplaceholder.typicode.com' });
+
+Vue.config.productionTip = false
+
+new Vue({
+  render: function (h) { return h(App) },
+}).$mount('#app')

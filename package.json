@@ -1,0 +1,22 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:vanila:fetch": "npm run --prefix tests/vanila-fetch build",
+    "build:vanila:axios": "npm run --prefix tests/vanila-axios build",
+    "build:svelte:fetch": "npm run --prefix tests/svelte-fetch build",
+    "build:svelte:axios": "npm run --prefix tests/svelte-axios build",
+    "build:vue:axios": "npm run --prefix tests/vue-axios build",
+    "build:vue:fetch": "npm run --prefix tests/vue-fetch build",
+    "build:all": "npm run build:vanila:fetch && npm run build:vanila:axios && npm run build:svelte:fetch && npm run build:svelte:axios && npm run build:vue:fetch && npm run build:vue:axios",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "author": "",
+  "license": "ISC"
+}

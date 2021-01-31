@@ -1,0 +1,67 @@
+@import url(http://fonts.cdnfonts.com/css/fira-mono);
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	padding: 8px;
+	box-sizing: border-box;
+	font-family: "Fira Mono", sans-serif;
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+.wrapper.svelte-1uv2kqx{width:100px;height:50px;margin:0 auto}
+h3.svelte-1nz0qab>i.svelte-1nz0qab{font-weight:200;color:orange}ul.svelte-1nz0qab.svelte-1nz0qab{list-style-type:none}li.svelte-1nz0qab.svelte-1nz0qab{padding:5px;display:flex;align-items:center;line-height:2em}li.svelte-1nz0qab.svelte-1nz0qab:hover{background-color:aliceblue;cursor:pointer}input.svelte-1nz0qab.svelte-1nz0qab{margin:0.51em}label.svelte-1nz0qab.svelte-1nz0qab{cursor:pointer}.strike.svelte-1nz0qab.svelte-1nz0qab{text-decoration:line-through;color:lightgray}
