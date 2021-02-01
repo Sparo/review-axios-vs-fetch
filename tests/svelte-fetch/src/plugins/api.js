@@ -1,6 +1,7 @@
 export default class API {
     constructor () {
-        this.baseURL = 'https://jsonplaceholder.typicode.com';
+        // this.baseURL = 'https://jsonplaceholder.typicode.com';
+        this.baseURL = 'http://localhost:3000';
     }
 
     async fetch (path) {

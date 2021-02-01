@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const baseURL = 'https://jsonplaceholder.typicode.com';
+// const baseURL = 'https://jsonplaceholder.typicode.com';
+const baseURL = 'http://loclhost:3000';
 
 export default class API {
     constructor () {
