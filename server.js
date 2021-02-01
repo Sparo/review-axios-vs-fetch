@@ -31,7 +31,7 @@ app.get('/todos/completed', (req, res) => {
         console.log('seconds - ', new Date().getSeconds());
         res.json(data.filter(item => item.completed));
         console.log('=================');
-    }, 6000);
+    }, 2000);
 });
 
 // get todos

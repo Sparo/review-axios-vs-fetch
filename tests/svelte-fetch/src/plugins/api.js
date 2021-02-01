@@ -1,6 +1,6 @@
-class API {
-    constructor ({ baseURL }) {
-        this.baseURL = baseURL || 'http://localhost:3000';
+export default class API {
+    constructor (options = {}) {
+        this.baseURL = options.baseURL || 'http://localhost:3000';
         this.optionsData = {
             method: 'GET',
             headers: {
@@ -73,11 +73,5 @@ class API {
         } catch (error) {
             return { isError: true, ...error };
         }
-    }
-}
-
-export default {
-    install (Vue, options) {
-        Vue.prototype.$api = new API(options);
     }
 }
