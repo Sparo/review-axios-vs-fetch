@@ -96,5 +96,8 @@
         width: 100px;
         height: 50px;
         margin: 0 auto;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 </style>
