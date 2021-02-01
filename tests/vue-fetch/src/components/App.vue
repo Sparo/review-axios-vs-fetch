@@ -97,16 +97,18 @@ export default {
         },
 
         addNewTodo() {
-            const data = Object.assign({}, this.todoSchema, {
-                userId: this.userId,
-                id: this.todos.length + 1,
-                title: this.newTodo,
-                completed: false
-            });
+            if (this.newTodo) {
+                const data = Object.assign({}, this.todoSchema, {
+                    userId: this.userId,
+                    id: this.todos.length + 1,
+                    title: this.newTodo,
+                    completed: false
+                });
 
-            this.todos.push(data);
-            this.$api.post('/todo', data);
-            this.newTodo = '';
+                this.todos.push(data);
+                this.$api.post('/todo', data);
+                this.newTodo = '';
+            }
         },
 
         async getCompleted() {
