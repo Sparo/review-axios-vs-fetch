@@ -12,7 +12,7 @@
     "build:vue:axios": "npm run --prefix tests/vue-axios build",
     "build:vue:fetch": "npm run --prefix tests/vue-fetch build",
     "build:all": "npm run build:vanila:fetch && npm run build:vanila:axios && npm run build:svelte:fetch && npm run build:svelte:axios && npm run build:vue:fetch && npm run build:vue:axios",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

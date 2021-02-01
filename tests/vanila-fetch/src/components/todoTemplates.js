@@ -19,3 +19,20 @@ export const todo_template = function (data) {
         </label>
     </li>`;
 };
+
+export const add_new_todo = function () {
+    return `
+    <input id="newTodo" type="text" placeholder="type in todo">
+    <button type="submit">Add</button>
+`
+}
+
+export const get_completed_todos = function (timeout, completedTodos) {
+    return `
+    <button id="getCompleted">Get completed todos</button>
+    ${!timeout ?
+            `<span>${completedTodos.map(item => item.id)}</span>` :
+            '<span style="color:red"> Timeout Abort...</span>'
+        }
+    `
+}

@@ -63,8 +63,12 @@ app.put('/todo/:id', (req, res) => {
 // set new todo
 app.post('/todo', (req, res) => {
     const newTodo = req.body;
-    data.push(newTodo);
 
+    console.log('====== POST =====');
+    console.log(newTodo);
+    console.log('=================');
+
+    data.push(newTodo);
     res.json(data);
 });
 
