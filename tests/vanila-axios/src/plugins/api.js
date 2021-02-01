@@ -1,21 +1,41 @@
 import axios from 'axios';
 
-// const baseURL = 'https://jsonplaceholder.typicode.com';
-const baseURL = 'http://localhost:3000';
-
 export default class API {
-    constructor () {
-        this.axios = axios.create({ baseURL });
+    constructor (options = {}) {
+        this.axios = axios.create({
+            baseURL: options.baseURL || 'http://localhost:3000',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json;charset=UTF-8'
+            },
+            timeout: 4000
+        });
     }
 
-    async fetch (path) {
+    async get (path) {
         try {
-            // get data
-            const { data } = await this.axios.get(`${path}`);
+            const { data } = await this.axios.get(path);
             return data;
         } catch (error) {
-            console.error('Error parsing data: ', error);
-            return null;
+            return { isError: true, ...error };
+        }
+    }
+
+    async post (path, input) {
+        try {
+            const { data } = await this.axios.post(path, input);
+            return data;
+        } catch (error) {
+            return { isError: true, ...error };
+        }
+    }
+
+    async put (path, input) {
+        try {
+            const { data } = await this.axios.put(path, input);
+            return data;
+        } catch (error) {
+            return { isError: true, ...error };
         }
     }
 }
